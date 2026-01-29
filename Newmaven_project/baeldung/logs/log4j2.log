@@ -1,0 +1,4 @@
+[INFO ] 2026-01-29 10:04:52.516 [main] Log4jDemo - this is a information message
+[INFO ] 2026-01-29 10:04:52.517 [main] Log4jDemo - this is a debug message
+[INFO ] 2026-01-29 10:22:47.210 [main] Log4jDemo - this is a information message
+[INFO ] 2026-01-29 10:28:44.972 [main] Log4jDemo - this is a information message
