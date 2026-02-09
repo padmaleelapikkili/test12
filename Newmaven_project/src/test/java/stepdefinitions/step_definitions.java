@@ -27,7 +27,6 @@ public void user_in_on_google_search_page() {
     // Write code here that turns the phrase above into concrete actions
     
 }
-
 @When("user enters a text in  search box")
 public void user_enters_a_text_in_search_box() {
 	driver.findElement(By.name("q")).sendKeys("India");
