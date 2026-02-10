@@ -35,7 +35,7 @@ public void click_on_the_fresh() {
 
 @Then("click on fruits and vegetables")
 public void click_on_fruits_and_vegetables() {
-	driver.findElement(By.className("a-button-text")).click();
+	driver.findElement(By.xpath("/html/body/div[6]/div/div/div[2]/div/div/div/div/div/div[3]/div/div[1]/div/div/div[2]/span/div/span/span/button")).click();
 	//WebElement searchBox=driver.findElement(By.xpath("//*[@id"));
    // searchBox.click();
     //searchBox.clear();
