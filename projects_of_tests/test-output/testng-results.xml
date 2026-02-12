@@ -1,21 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+<testng-results ignored="0" total="0" passed="0" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2026-02-11T17:04:47 UTC" name="Default suite" finished-at="2026-02-11T17:04:54 UTC" duration-ms="7048">
+  <suite started-at="2026-02-12T05:22:19 UTC" name="Default suite" finished-at="2026-02-12T05:22:19 UTC" duration-ms="11">
     <groups>
     </groups>
-    <test started-at="2026-02-11T17:04:47 UTC" name="Default test" finished-at="2026-02-11T17:04:54 UTC" duration-ms="7048">
-      <class name="Extentreport.ex_extentreport">
-        <test-method is-config="true" signature="starttest()[pri:0, instance:Extentreport.ex_extentreport@662ac478]" started-at="2026-02-11T17:04:47 UTC" name="starttest" finished-at="2026-02-11T17:04:47 UTC" duration-ms="73" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- starttest -->
-        <test-method signature="extenttest()[pri:0, instance:Extentreport.ex_extentreport@662ac478]" started-at="2026-02-11T17:04:47 UTC" name="extenttest" finished-at="2026-02-11T17:04:54 UTC" duration-ms="6944" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- extenttest -->
-      </class> <!-- Extentreport.ex_extentreport -->
+    <test started-at="2026-02-12T05:22:19 UTC" name="Default test" finished-at="2026-02-12T05:22:19 UTC" duration-ms="11">
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

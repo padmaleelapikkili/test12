@@ -2,11 +2,16 @@ package packageof_tests;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+
 import org.openqa.selenium.By;
+
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.testng.annotations.AfterTest;
-import org.testng.annotations.BeforeClass;
+import org.openqa.selenium.support.ui.Select;
+
+
+
 
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
@@ -14,35 +19,41 @@ import io.cucumber.java.en.When;
 import logger_ex.log4j2_ex;
 
 public class sample {
-	private static Logger logger= LogManager.getLogger(log4j2_ex.class);
+	private static  final Logger logger= LogManager.getLogger(log4j2_ex.class);
 	
-	/*@BeforeClass
-	public void setup() {
-	driver=new ChromeDriver();
-			driver.manage().window().maximize();
-	}
-	@AfterTest
-	public  void teardown() {
-		driver.quit();
-	}*/
 	WebDriver driver;
 	@Given("I am on the amazon website")
-	public void i_am_on_the_amazon_website() {
+	public void i_am_on_the_amazon_website() throws InterruptedException {
+		
 		driver=new ChromeDriver();
 		driver.manage().window().maximize();
 	   driver.get("https://www.amazon.in");
-	   logger.info("browser is open");
+	   logger.info("Amazon is open");
+	   driver.findElement(By.xpath("//*[@id=\"searchDropdownBox\"]" )).click();
+	   //driver.findElement(By.xpath("//*[@id=\"nav-search-bar-form\"]")).click();
+	WebElement drpdwn;
+	drpdwn=driver.findElement(By.xpath("//*[@id=\"searchDropdownBox\"]" ));
+	Select sel=new Select(drpdwn);
+	Thread.sleep(2000);
+	sel.selectByVisibleText("Amazon Fashion");
+	driver.findElement(By.xpath("//*[@id=\"twotabsearchtextbox\"]")).submit();
+	
+	   
+	   
+	   
+	   
 	}
 
-	@Then("click on fashion")
+@Then("click on fashion")
 	public void click_on_fashion() {
-	   driver.findElement(By.xpath("//*[@id=\"nav-xshop\"]/ul/li[10]/div/a")).click();
+	 // driver.findElement(By.xpath("//*[@id=\"nav-xshop\"]/ul/li[10]/div/a")).click();
+	System.out.println("optional module");
 	   logger.info("fashion is click");
 	}
 
 	@Then("click on the under {int}")
 	public void click_on_the_under(Integer int1) {
-		driver.findElement(By.cssSelector("#sobe_d_b_ms_24_1 > a > div > div > img")).click();
+		driver.findElement(By.xpath("//*[@id=\"sobe_d_b_ms_24_1\"]/a/div/div/img")).click();
 		logger.info("the selected icon is click");
 	   
 	}
@@ -80,6 +91,7 @@ public class sample {
 	 Thread.sleep(2000);
 	 driver.quit();
 	logger.info("the cart is empty");
+	
 	 
 	}
 
